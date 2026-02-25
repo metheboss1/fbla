@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    TrustShield Main Interface
+    Purpose: Provides a clean, accessible UI for fraud-aware business evaluation.
+    Design Philosophy:
+    - Minimal cognitive load
+    - Strong visual hierarchy
+    - Immediate trust-score visibility
+  -->
+  <meta charset="UTF-8">
+  <title>TrustShield — Deep Learning Fraud Detection</title>
+
+  <!-- External stylesheet for modular separation of concerns -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chart.js used for data visualization and ML transparency graphs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- HERO SECTION: Establishes product identity and mission -->
+  <header class="hero">
+    <h1>TrustShield</h1>
+    <p class="subtitle">
+      AI + Neural Network Powered Review Fraud Detection
+    </p>
+  </header>
+
+  <!-- FILTER & SORT CONTROLS: Enhances UX and user journey clarity -->
+  <section class="controls">
+
+    <!-- Category filtering improves business discovery -->
+    <label>Category:</label>
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="food">Food</option>
+      <option value="retail">Retail</option>
+    </select>
+
+    <!-- Sorting allows analytical prioritization -->
+    <label>Sort:</label>
+    <select id="sortSelect">
+      <option value="high">Highest Trust</option>
+      <option value="low">Lowest Trust</option>
+    </select>
+
+  </section>
+
+  <!-- Dynamic container populated by JavaScript rendering engine -->
+  <section id="businessContainer"></section>
+
+  <!-- Modal: Provides deep AI transparency breakdown -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <!-- Close button ensures intuitive navigation -->
+      <span id="closeModal">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Core application logic -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
